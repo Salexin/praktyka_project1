@@ -1,0 +1,24 @@
+@use 'variables' as *;
+nav{
+    display: flex;
+    align-items: center;
+    background-color: $color6;  
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    color: $color7;
+    padding: 20px;
+}
+.logo {
+    flex-basis: 70%;
+    font-size: 1.8rem;
+}
+.material-icons{
+    font-size: 3rem;
+    color: inherit;
+}
+.menu {
+    flex-basis: 30%;
+    text-align: right;
+    padding-right: 20px;
+}
