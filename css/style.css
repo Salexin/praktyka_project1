@@ -77,6 +77,7 @@ nav {
 .material-icons {
   font-size: 3rem;
   color: inherit;
+  cursor: pointer;
 }
 
 .menu {
