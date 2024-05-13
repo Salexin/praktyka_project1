@@ -13,3 +13,11 @@ hamburger.addEventListener('click', () => {
 close.addEventListener('click', () => {
     menuDiv.classList.remove('showMenu');
 })
+
+const linksMenu = document.querySelectorAll('.navigation a')
+
+linksMenu.forEach(elem => {
+    elem.addEventListener('click', () => {
+        menuDiv.classList.remove('showMenu');
+    })
+})
