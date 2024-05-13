@@ -58,6 +58,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -72,6 +77,7 @@ nav {
 .logo {
   flex-basis: 70%;
   font-size: 1.8rem;
+  padding-left: 20px;
 }
 
 .material-icons {
@@ -84,6 +90,79 @@ nav {
   flex-basis: 30%;
   text-align: right;
   padding-right: 20px;
+}
+
+.navigation {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #0D0D0D;
+  z-index: 3;
+  animation: hide-menu-action 0.5s linear;
+  color: whitesmoke;
+}
+@media screen and (min-width: 680px) {
+  .navigation {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .navigation {
+    width: 25%;
+  }
+}
+.navigation .material-icons {
+  color: whitesmoke;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.navigation ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.navigation li {
+  flex-basis: 10%;
+  width: 100%;
+}
+.navigation a {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition-duration: 0.5s;
+  font-size: 1.8rem;
+}
+.navigation a:hover {
+  background-color: rgba(166, 115, 96, 0.631372549);
+}
+
+@keyframes show-menu-action {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
+}
+@keyframes hide-menu-action {
+  from {
+    display: block;
+  }
+  to {
+    scale: 0;
+    display: none;
+  }
+}
+.showMenu {
+  display: block;
+  animation: show-menu-action 0.5s linear;
 }
 
 @keyframes show-header-box {
@@ -107,7 +186,7 @@ header .header-box {
   display: flex;
   flex-direction: column;
   padding: 30px;
-  animation: show-header-box 3s linear;
+  animation: show-header-box 2s linear;
 }
 header h1 {
   font-size: 2rem;
